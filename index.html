@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Explore a diverse collection of Dev Mistry's creative works, ranging from captivating graphic designs to innovative web development projects.">
+  <meta name="keywords"
+    content="Graphic Design, Web Development, Portfolio, Creative Works, Digital Art, UI/UX Design, Illustration, Branding, Responsive Design">
+  <meta name="author" content="Dev Mistry">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="shortcut icon" href="images/dev.jpeg" type="image/x-icon">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script>
+    window.onload = function () {
+      if (/Mobi/.test(navigator.userAgent)) {
+        var prompted = sessionStorage.getItem("prompted");
+        if (!prompted) {
+          var confirmDesktop = confirm("Please set desktop site for better experience.");
+          if (confirmDesktop) {
+            sessionStorage.setItem("prompted", "true");
+          }
+        }
+      }
+    }
+  </script>
+  <title>Dev's Portfolio</title>
+</head>
+
+<body>
+  <div id="progress">
+    <span id="progress-value"><i class="ri-arrow-up-line"></i></span>
+  </div>
+  <nav>
+    <div class="nav__logo">
+      <a href="#"><img src="images/logo.png" alt="logo" id="logo" /></a>
+    </div>
+    <ul class="nav__links">
+      <li class="link"><a href="#Home">Home</a></li>
+      <li class="link"><a href="#Project">Projects</a></li>
+      <li class="link"><a href="#skill">About Me</a></li>
+      <li class="link"><a href="#Contact">Contact Me</a></li>
+      <li class="link"><a href="#Social-Media">Social Media</a></li>
+    </ul>
+    <i id="icon" class="ri-sun-foggy-fill"></i>
+    <i class="ri-menu-line" id="close"></i>
+  </nav>
+  <div class="responsiveNav">
+    <li class="link"><a href="#Home">Home</a></li>
+    <li class="link"><a href="#Project">Projects</a></li>
+    <li class="link"><a href="#skill">About Me</a></li>
+    <li class="link"><a href="#Contact">Contact Me</a></li>
+    <li class="link"><a href="#Social-Media">Social Media</a></li>
+  </div>
+  <header class="section__container header__container" id="Home">
+    <div class="header__image">
+      <img src="images/Dev.jpg " alt="header" />
+    </div>
+    <div class="header__content">
+      <span class="bg__blur"></span>
+      <span class="bg__blur header__blur"></span>
+      <p>
+        Hello, I'm <span id="element"></span>, a passionate student hailing from Chikhali, Gujarat, currently pursuing a
+        Diploma in
+        Information Technology (I.T). Embracing the vibrant culture and rich heritage of Gujarat, I am fueled by a
+        desire to excel in the dynamic field of technology. With a commitment to learning and innovation, I'm eager to
+        contribute my skills and knowledge to the ever-evolving landscape of Information Technology.
+      </p>
+      <a href="images/Resume.pdf" target="_blank"><button class="btn">Resume
+          Download</button></a>
+    </div>
+
+  </header>
+
+  <section class="section__container explore__container" id="Project">
+    <div class="explore__header" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
+      data-aos-duration="500">
+      <h2 class="section__header" data-aos="zoom-in-down">EXPLORE MY PROJECTS</h2>
+    </div>
+    <div class="section__subheader" data-aos="zoom-in-up">
+      During The Collage I had Created Some of the Projects .Which You Can See below.
+    </div>
+    <div class="arrows">
+      <i class="ri-arrow-left-line" id="left" onclick="ScrollContainer('left')"></i>
+      <i class="ri-arrow-right-line" id="right" onclick="ScrollContainer('right')"></i>
+    </div>
+    <div class="explore__grid">
+      <div class="explore__card" data-aos="zoom-in-up">
+        <span><i class="ri-spy-fill"></i></span>
+        <h4>FACE RECONGNISION</h4>
+        <p>
+          Utilizing cutting-edge algorithms, our Face Recognition Project ensures secure access control with precision
+          and efficiency.
+        </p>
+        <a href="#pro-Download">Download Now <i class="ri-arrow-right-line"></i></a>
+      </div>
+      <div class="explore__card" data-aos="zoom-in-up">
+        <span><i class="ri-robot-fill"></i></span>
+        <h4>JARVIS AI</h4>
+        <p>
+          Empowering businesses with intuitive virtual assistance, JARVIS AI streamlines operations, optimizes workflows
+          .
+        </p>
+        <a href="#pro-Download">Download Now <i class="ri-arrow-right-line"></i></a>
+      </div>
+      <div class="explore__card" data-aos="zoom-in-up">
+        <span><i class="ri-boxing-fill"></i></span>
+        <h4>GYM MANAGEMENT SYSTEM</h4>
+        <p>
+          Seamlessly manage memberships, schedules, revolutionizing fitness facility operations.
+        </p>
+        <a href="#pro-Download">Download Now <i class="ri-arrow-right-line"></i></a>
+      </div>
+      <div class="explore__card" data-aos="zoom-in-up">
+        <span><i class="ri-drop-fill"></i></span>
+        <h4>WATER DELIVERY SYSTEM</h4>
+        <p>
+          Delivering hydration seamlessly to your doorstep,My W.D.S ensures convenient access to clean water.
+        </p>
+        <a href="#pro-Download">Download Now <i class="ri-arrow-right-line"></i></a>
+      </div>
+      <div class="explore__card" data-aos="zoom-in-up">
+        <span><i class="ri-wallet-2-line"></i></span>
+        <h4>Money Saving</h4>
+        <p>
+          Incrementally saving 1 rupee daily builds financial discipline, accumulating to significant savings over time.
+        </p>
+        <a href="#pro-Download">Download Now <i class="ri-arrow-right-line"></i></a>
+      </div>
+      <div class="explore__card" data-aos="zoom-in-up">
+        <span><i class="ri-mouse-fill"></i></span>
+        <h4>Hand Mouse Control</h4>
+        <p>
+          Python, coupled with OpenCV and machine learning, enables hand gesture recognition for intuitive mouse control.
+        </p>
+        <a href="#pro-Download">Download Now <i class="ri-arrow-right-line"></i></a>
+      </div>
+      <div class="explore__card" data-aos="zoom-in-up">
+        <span><i class="ri-robot-line"></i></span>
+        <h4>Chatbot using PHP</h4>
+        <p>
+          The PHP Chatbot is designed to engage users in a conversation, providing responses based on user input.
+        </p>
+        <a href="#pro-Download">Download Now <i class="ri-arrow-right-line"></i></a>
+      </div>
+      <div class="explore__card" data-aos="zoom-in-up">
+        <span><i class="ri-feedback-fill"></i></span>
+        <h4>Feedback Form using PHP</h4>
+        <p>
+          The PHP Feedback Form is designed to engage users in a conversation, providing responses based on user input.
+        </p>
+        <a href="#pro-Download">Download Now <i class="ri-arrow-right-line"></i></a>
+      </div>
+      <div class="explore__card" data-aos="zoom-in-up">
+        <span><i class="ri-discord-line"></i></span>
+        <h4>Chess Using JAVA</h4>
+        <p>
+          The Java Chess is designed to entertain users in a conversation, providing Best Gaming Experience To user
+          input.
+        </p>
+        <a href="#pro-Download">Download Now <i class="ri-arrow-right-line"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section__container join__container" id="skill">
+    <h2 class="section__header" data-aos="zoom-in-down">About My Skills</h2>
+    <p class="section__subheader" data-aos="zoom-in-down">
+      As a passionate I.T (Information Technology) student, I have developed a diverse set of technical skills and
+      gained valuable
+      experience through coursework, projects, and internships. Here's Skill Pr(%) In That Bars:
+    </p>
+    <div id="skill_container">
+      <div class="skill">
+        <div class="outer">
+          <div class="inner">
+            <div id="number">
+
+            </div>
+          </div>
+        </div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+          <defs>
+            <linearGradient id="GradientColor">
+              <stop offset="0%" stop-color="rgb(216, 92, 42)" />
+              <stop offset="100%" stop-color="#8b3dff" />
+            </linearGradient>
+          </defs>
+          <circle cx="80" cy="80" r="70" stroke-linecap="round" id="circle" />
+        </svg>
+        <div class="skh1">
+          <h1 class="h1">HTML</h1>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="outer">
+          <div class="inner">
+            <div id="number1">
+            </div>
+          </div>
+        </div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+          <defs>
+            <linearGradient id="GradientColor">
+              <stop offset="0%" stop-color="rgb(216, 92, 42)" />
+              <stop offset="100%" stop-color="#8b3dff" />
+            </linearGradient>
+          </defs>
+          <circle cx="80" cy="80" r="70" stroke-linecap="round" id="circle1" />
+        </svg>
+        <div class="skh1">
+          <h1 class="h1">CSS</h1>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="outer">
+          <div class="inner">
+            <div id="number2">
+            </div>
+          </div>
+        </div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+          <defs>
+            <linearGradient id="GradientColor">
+              <stop offset="0%" stop-color="rgb(216, 92, 42)" />
+              <stop offset="100%" stop-color="#8b3dff" />
+            </linearGradient>
+          </defs>
+          <circle cx="80" cy="80" r="70" stroke-linecap="round" id="circle2" />
+        </svg>
+        <div class="skh1">
+          <h1 class="h1">JAVASCRIPT</h1>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="outer">
+          <div class="inner">
+            <div id="number3">
+            </div>
+          </div>
+        </div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+          <defs>
+            <linearGradient id="GradientColor">
+              <stop offset="0%" stop-color="rgb(216, 92, 42)" />
+              <stop offset="100%" stop-color="#8b3dff" />
+            </linearGradient>
+          </defs>
+          <circle cx="80" cy="80" r="70" stroke-linecap="round" id="circle3" />
+        </svg>
+        <div class="skh1">
+          <h1 class="h1">PYTHON</h1>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="outer">
+          <div class="inner">
+            <div id="number4">
+            </div>
+          </div>
+        </div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+          <defs>
+            <linearGradient id="GradientColor">
+              <stop offset="0%" stop-color="rgb(216, 92, 42)" />
+              <stop offset="100%" stop-color="#8b3dff" />
+            </linearGradient>
+          </defs>
+          <circle cx="80" cy="80" r="70" stroke-linecap="round" id="circle4" />
+        </svg>
+        <div class="skh1">
+          <h1 class="h1">DATABASE(MySQL)</h1>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="outer">
+          <div class="inner">
+            <div id="number5">
+            </div>
+          </div>
+        </div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+          <defs>
+            <linearGradient id="GradientColor">
+              <stop offset="0%" stop-color="rgb(216, 92, 42)" />
+              <stop offset="100%" stop-color="#8b3dff" />
+            </linearGradient>
+          </defs>
+          <circle cx="80" cy="80" r="70" stroke-linecap="round" id="circle5" />
+        </svg>
+        <div class="skh1">
+          <h1 class="h1">JAVA</h1>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="outer">
+          <div class="inner">
+            <div id="number6">
+            </div>
+          </div>
+        </div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+          <defs>
+            <linearGradient id="GradientColor">
+              <stop offset="0%" stop-color="rgb(216, 92, 42)" />
+              <stop offset="100%" stop-color="#8b3dff" />
+            </linearGradient>
+          </defs>
+          <circle cx="80" cy="80" r="70" stroke-linecap="round" id="circle6"/>
+        </svg>
+        <div class="skh1">
+          <h1 class="h1">PHP</h1>
+        </div>
+      </div>
+
+  </section>
+
+  <section class="section__container price__container" id="pro-Download">
+    <h2 class="section__header" data-aos="zoom-in-up">Download Projects From Here</h2>
+    <h1 class="catagory" data-aos="zoom-in-right">Web Projects:</h1>
+    <div class="price__grid">
+      <div class="price__card" data-aos="zoom-in-up">
+        <div class="price__card__content">
+          <h4>Basic Project</h4>
+          <h3>W.D.S</h3>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Easy To Understand
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            HTML & CSS Used Only
+          </p>
+        </div>
+        <a href="images/WDS.zip" download class="btn price__btn" target="_blank">
+          Download
+        </a>
+      </div>
+      <div class="price__card" data-aos="zoom-in-up">
+        <div class="price__card__content">
+          <h4>Exellence Project</h4>
+          <h3>Fitness Project</h3>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Best For Collage project
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Responsive
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Language : HTML ,Css ,JavaScript
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Functional
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Guarenteed Full Marks
+          </p>
+        </div>
+        <a href="https://github.com/Dev-Mistry02/MoneySavingByDev" download class="btn price__btn" target="_blank">
+          Download
+        </a>
+      </div>
+      <div class="price__card" data-aos="zoom-in-up">
+        <div class="price__card__content">
+          <h4>Ordinary Project</h4>
+          <h3>Money Saving</h3>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Language : HTML ,Css ,JavaScript
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Best Project
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Unique Project
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Functional
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Guarenteed Full Marks
+          </p>
+        </div>
+        <a href="https://github.com/Dev-Mistry02/MoneySavingByDev" download class="btn price__btn" target="_blank">
+          Download
+        </a>
+      </div>
+    </div>
+    <h1 class="catagory" data-aos="zoom-in-right">Python Projects :</h1>
+    <div class="price__grid2">
+      <div class="price__card" data-aos="zoom-in-up">
+        <div class="price__card__content">
+          <h4>Best Project</h4>
+          <h3>F - Recongnition</h3>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Best For Collage project
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Understanding project
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Uniqueness project
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Language : Python
+          </p>
+        </div>
+        <a href="images/face decation.zip" download class="btn price__btn" target="_blank">
+          Download
+        </a>
+      </div>
+
+      <div class="price__card" data-aos="zoom-in-up">
+        <div class="price__card__content">
+          <h4>Intermediate Project</h4>
+          <h3>Jarvis Ai</h3>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Language: Python
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Easy To Use
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            smart
+          </p>
+        </div>
+        <a href="images/jarvis.zip" download class="btn price__btn" target="_blank">
+          Download
+        </a>
+      </div>
+
+      <div class="price__card" data-aos="zoom-in-up">
+        <div class="price__card__content">
+          <h4>Extra Ordinary Project</h4>
+          <h3>Hand Gesture</h3>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Best For Collage project
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Language : Python
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Unique Project
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Mouse Clicks Functions
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Guarenteed Full Marks
+          </p>
+        </div>
+        <a href="images/HandGesture.zip" download class="btn price__btn" target="_blank">
+          Download
+        </a>
+      </div>
+    </div>
+    <h1 class="catagory" data-aos="zoom-in-right">PHP Projects :</h1>
+    <div class="price__grid3">
+      <div class="price__card" data-aos="zoom-in-up">
+        <div class="price__card__content">
+          <h4>Extra Ordinary Project</h4>
+          <h3>Chatbot</h3>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Best For Collage project
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Language : PHP
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Easy Project
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Fully Functional
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Guarenteed Full Marks
+          </p>
+        </div>
+        <a href="https://github.com/Dev-Mistry02/Chatbot" download class="btn price__btn" target="_blank">
+          Download
+        </a>
+      </div>
+      <div class="price__card" data-aos="zoom-in-up">
+        <div class="price__card__content">
+          <h4>Extra Ordinary Project</h4>
+          <h3>Feedback Form</h3>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Best For Collage project
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Language : PHP
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Easy Project
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Fully Functional
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Guarenteed Full Marks
+          </p>
+        </div>
+        <a href="images/feedback.zip" download class="btn price__btn" target="_blank">
+          Download
+        </a>
+      </div>
+      <div class="price__card" data-aos="zoom-in-up">
+        <div class="price__card__content">
+          <h4>Extra Ordinary Project</h4>
+          <h3>Car Washing Management</h3>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Best For Collage project
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Language : PHP
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Easy Project
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Fully Functional
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Guarenteed Full Marks
+          </p>
+        </div>
+        <a href="images/cwms.zip" download class="btn price__btn" target="_blank">
+          Download
+        </a>
+      </div>
+    </div>
+
+    <h1 class="catagory" data-aos="zoom-in-right">java Projects :</h1>
+    <div class="price__grid4">
+      <div class="price__card" data-aos="zoom-in-up">
+        <div class="price__card__content">
+          <h4>Extra Best Project</h4>
+          <h3>Chess Game</h3>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Best For Collage project
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Language : Java
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Easy Project
+          </p>
+          <p>
+            <i class="ri-checkbox-circle-line"></i>
+            Guarenteed Full Marks
+          </p>
+        </div>
+        <a href="images/Chess .zip" download class="btn price__btn" target="_blank">
+          Download
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section__container class__container" id="Contact">
+    <div class="class__header">
+      <h2 class="section__header" data-aos="zoom-in-up">Get In Touch</h2>
+    </div>
+    <div class="class">
+      <div class="contact-map" data-aos="zoom-in-up">
+        <img src="images/formbg.png" alt="bg">
+      </div>
+      <div class="contact-form" data-aos="zoom-in-up">
+        <h1>Fill This Form</h1>
+        <form action="https://api.web3forms.com/submit" method="POST" onsubmit="return validateForm()">
+          <input type="hidden" name="access_key" value="db7709b2-ae85-4c4c-8999-7fd276cde075">
+          <!-- Actual From Start From Here.. -->
+
+
+          <span id="nameError" class="error"></span>
+          <input type="text" name="name" placeholder="Enter Your Name" class="contact-form-txt" id="name">
+
+          <span id="emailError" class="error"></span>
+          <input type="email" name="email" placeholder="Enter Your Email" class="contact-form-txt" id="email">
+
+          <span id="messageError" class="error"></span>
+          <span id="msgvalid" class="valid"></span>
+          <textarea name="message" placeholder="Enter Message Here......" class="contact-form-textarea"
+            id="message"></textarea>
+
+          <button type="submit" class="contact-form-btn">Submit</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="section__container footer__container" id="Social-Media">
+    <span class="bg__blur"></span>
+    <span class="bg__blur footer__blur"></span>
+    <div class="footer__col">
+      <div class="footer__logo"><img src="images/logo.png" alt="logo" id="logo1"></div>
+      <p>
+        Take the first step towards a Knowledge with My
+        unbeatable Projects. Let's sweat, achieve, and conquer together!<br>
+        Don't Forget to Follow My Social Media Handals..!!
+      </p>
+      <div class="footer__socials">
+        <a href="https://www.facebook.com/profile.php?id=100085280537849&mibextid=PtKPJ9"><i
+            class="ri-facebook-fill"></i></a>
+        <a href="https://www.instagram.com/dev__mistry?igsh=MTUxNXpqZTRmbGZ0cA%3D%3D&utm_source=qr"><i
+            class="ri-instagram-line"></i></a>
+        <a
+          href="https://www.linkedin.com/in/mistry-dev-884a9a284?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app "><i
+            class="ri-linkedin-fill"></i></a>
+        <a href="https://www.snapchat.com/add/dev_mistry0211?share_id=Tqa-cwnRTuqAc_H7RQ5fdA&locale=en_IN "><i
+            class="ri-snapchat-fill"></i></a>
+        <a href="https://wa.me/+918141368777"><i class="ri-whatsapp-fill"></i></a>
+
+        <a href="tel: +91 8141368777"><i class="ri-phone-fill"></i></a>
+      </div>
+
+
+    </div>
+    </div>
+  </footer>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="portfolio.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+
+    document.getElementsByClassName("contact-form-btn")[0].addEventListener("click", () => {
+      confetti();
+    })
+
+    // Initialize the typing animation
+    const typingAnimationElement = document.getElementById('element');
+    const typingTexts = ['Dev Mistry     ', 'Mistry Dev    ', 'Coder Dev   '];
+
+    function playTypingAnimation(text) {
+      for (let i = 0; i < text.length; i++) {
+        setTimeout(() => {
+          typingAnimationElement.textContent += text[i];
+        }, i * 80);
+      }
+
+      setTimeout(() => {
+        typingAnimationElement.textContent = '';
+        playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+      }, text.length * 100);
+    }
+
+    playTypingAnimation(typingTexts[0]);
+
+    AOS.init();
+
+   var icon = document.getElementById('icon');
+var logo = document.getElementById('logo');   // Assuming logo element exists
+var logo1 = document.getElementById('logo1'); // Assuming logo1 element exists
+
+// Function to apply the selected theme
+function applyTheme(isDark) {
+  if (isDark) {
+    document.body.classList.add("dark-theme");
+    icon.className = "ri-moon-clear-fill";
+    icon.title = "Dark-Mode";
+    logo.src = "images/1.png";
+    logo1.src = "images/1.png";
+  } else {
+    document.body.classList.remove("dark-theme");
+    icon.className = "ri-sun-foggy-fill";
+    icon.title = "Light-Mode";
+    logo.src = "images/logo.png";
+    logo1.src = "images/logo.png";
+  }
+}
+
+// Check and apply the saved theme on page load
+var savedTheme = localStorage.getItem("theme");
+if (savedTheme === "dark") {
+  applyTheme(true);
+} else {
+  applyTheme(false);
+}
+
+// Toggle theme functionality
+icon.onclick = function () {
+  var isDark = document.body.classList.toggle("dark-theme");
+  if (isDark) {
+    localStorage.setItem("theme", "dark"); // Save dark theme
+    applyTheme(true);
+  } else {
+    localStorage.setItem("theme", "light"); // Save light theme
+    applyTheme(false);
+  }
+};
+
+  </script>
+</body>
+
+</html>
