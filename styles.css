@@ -614,6 +614,12 @@ svg{
   }
 }
 
+@keyframes MERN {
+  100%{
+    stroke-dashoffset: 225;
+  }
+}
+
 #circle5{
   fill: none;
   stroke: url(#GradientColor);
@@ -636,6 +642,18 @@ svg{
 
 #circle6.animated{
   animation: Mine 2s linear forwards;
+}
+
+#circle7{
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 20px;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 472;
+}
+
+#circle7.animated{
+  animation: MERN 2s linear forwards;
 }
 
 #circle{
