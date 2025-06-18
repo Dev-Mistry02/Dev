@@ -11,7 +11,6 @@ menu.onclick = function(){
 
 }
 
-
 // Bottom Arrow.......!
 
 let calcScrollValue = () => {
@@ -98,13 +97,13 @@ function animateNumber() {
   const number2 = document.getElementById("number2");
   let counter2 = 0;
   const interval2 = setInterval(function () {
-    if (counter2 == 50) {
+    if (counter2 == 70) {
       clearInterval(interval2);
     } else {
       counter2 += 1;
       number2.innerHTML = counter2 + "%";
     }
-  }, 40);
+  }, 30);
 
   const number3 = document.getElementById("number3");
   let counter3 = 0;
@@ -115,7 +114,7 @@ function animateNumber() {
       counter3 += 1;
       number3.innerHTML = counter3 + "%";
     }
-  }, 22);
+  }, 30);
 
   const number4 = document.getElementById("number4");
   let counter4 = 0;
@@ -149,6 +148,17 @@ function animateNumber() {
       number6.innerHTML = counter6 + "%";
     }
   }, 33);
+
+  const number7 = document.getElementById("number7");
+  let counter7 = 0;
+  const interval7 = setInterval(function () {
+    if (counter7 == 60) {
+      clearInterval(interval7);
+    } else {
+      counter7 += 1;
+      number7.innerHTML = counter7 + "%";
+    }
+  }, 35);
 }
 
 
@@ -177,6 +187,7 @@ const skillDiv3 = document.querySelector('#circle3');
 const skillDiv4 = document.querySelector('#circle4');
 const skillDiv5 = document.querySelector('#circle5');
 const skillDiv6 = document.querySelector('#circle6');
+const skillDiv7 = document.querySelector('#circle7');
 observer.observe(skillDiv);
 observer.observe(skillDiv1);
 observer.observe(skillDiv2);
@@ -184,6 +195,8 @@ observer.observe(skillDiv3);
 observer.observe(skillDiv4);
 observer.observe(skillDiv5);
 observer.observe(skillDiv6);
+observer.observe(skillDiv7);
+
 
 // For Validation of Form 
 
