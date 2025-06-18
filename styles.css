@@ -572,6 +572,11 @@ nav i:hover {
   color: var(--white);
 }
 
+#number7{
+  font-weight: 600px;
+  color: var(--white);
+}
+
 svg{
   position: absolute;
   top: 0;
