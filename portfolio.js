@@ -336,7 +336,7 @@ function speakErrors() {
 
 function initiateUPIPayment(projectName, downloadUrl) {
     const upiId = "mistryjagruti823-1@okhdfcbank"; 
-    const payeeName = "Dev";
+    const payeeName = "Dev Mistry";
     const amount = "49";
     const currency = "INR";
     const note = `Payment for ${projectName}`;
