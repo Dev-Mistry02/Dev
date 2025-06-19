@@ -333,3 +333,33 @@ function speakErrors() {
 
   speechSynthesis.speak(utterance);
 }
+
+function initiateUPIPayment(projectName, downloadUrl) {
+    const upiId = "mistryjagruti823-1@okhdfcbank"; // 💡 Replace with your real UPI ID
+    const payeeName = "Dev";
+    const amount = "49"; // ₹49 — You can change per project
+    const currency = "INR";
+    const note = `Payment for ${projectName}`;
+
+    // UPI deep link
+    const upiLink = `upi://pay?pa=${upiId}&pn=${encodeURIComponent(payeeName)}&am=${amount}&cu=${currency}&tn=${encodeURIComponent(note)}`;
+
+    // Open UPI app
+    window.location.href = upiLink;
+
+    // After a few seconds, ask for confirmation
+    setTimeout(() => {
+      const confirmPayment = confirm("Did you complete the payment?");
+      if (confirmPayment) {
+        // Trigger download
+        const link = document.createElement('a');
+        link.href = downloadUrl;
+        link.download = '';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      } else {
+        alert("Payment not completed. Try again!");
+      }
+    }, 5000); // ⏳ Wait 5 seconds for UPI app to open
+  }
