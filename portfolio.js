@@ -335,9 +335,9 @@ function speakErrors() {
 }
 
 function initiateUPIPayment(projectName, downloadUrl) {
-    const upiId = "mistryjagruti823-1@okhdfcbank"; // 💡 Replace with your real UPI ID
+    const upiId = "mistryjagruti823-1@okhdfcbank"; 
     const payeeName = "Dev";
-    const amount = "49"; // ₹49 — You can change per project
+    const amount = "49";
     const currency = "INR";
     const note = `Payment for ${projectName}`;
 
