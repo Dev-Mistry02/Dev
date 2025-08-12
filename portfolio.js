@@ -236,7 +236,7 @@ function validateForm() {
 
 
 
-  var badWords = ["lodu", "chutiyo", "chodu", "bsdk", "lund", "bkl", "mc", "chutiye", "jhathu", "chut","bc","ben chod"];
+  var badWords = ["lodu", "chutiyo", "chodu", "bsdk", "lund", "bkl", "mc", "chutiye", "jhathu", "chut","bc","ben chod","bhadvo","rand","gand"];
   var rudeWords = ["fuck", "fucking", "fuck you"]; // Words to handle differently
 
   var messageLower = message.toLowerCase();
